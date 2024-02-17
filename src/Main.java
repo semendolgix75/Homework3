@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Значение переменной task1Short с типом Short равно "+task1Short);
         long task1Long=-9223372036854775808L;
         System.out.println("Значение переменной task1Long с типом long равно "+task1Long);
-        float task1Float=689.4F;
+        float task1Float=689.4f;
         System.out.println("Значение переменной task1Float с типом float равно "+task1Float);
         double task1Double=-1111111111.11111111111;
         System.out.println("Значение переменной task1Double с типом double равно "+task1Double);
@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Значению "+task2Float+" присвоен тип float");
         long task2Long =987678965549L;
         System.out.println("Значению "+task2Long+" присвоен тип long");
-        float task2Float1 =2.786F;
+        float task2Float1 =2.786f;
         System.out.println("Значению "+task2Float1+" присвоен тип float");
         int task2Int =569;
         System.out.println("Значению "+task2Int+" присвоен тип int");
@@ -52,7 +52,7 @@ public class Main {
 
         System.out.println("Задача 4");
 //  Производительность машины для изготовления бутылок — 16 бутылок за 2 минуты.
-        float efficiency=16;                    //Производительность машины для изготовления бутылок в 2 минуты
+        float efficiency=16f;                    //Производительность машины для изготовления бутылок в 2 минуты
         float efficiency1=efficiency/2*20;              //за 20 минут
         float efficiency2=efficiency/2*60*24;           //за сутки
         float efficiency3=efficiency/2*60*24*3;         //за 3 дня
@@ -66,7 +66,7 @@ public class Main {
         System.out.println("Задача 5");
 //        На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой.
 //        На один класс уходит 2 банки белой и 4 банки коричневой краски. Сколько банок каждой краски было куплено?
-        float qtyPot=120;
+        float qtyPot=120f;
         float qtyOffice=qtyPot/(2+4);    // Количество классов на требуемую краску
         System.out.println("В школе, где "+qtyOffice+" классов, нужно "+qtyOffice*2+" банок белой краски " +
                 "и "+qtyOffice*4+" банок коричневой краски ");
@@ -80,7 +80,7 @@ public class Main {
         int weightMilk=200/100*105;         //Молоко — 200 мл (100 мл = 105 грамм).
         int weightIce=2*100;         // Мороженое-пломбир — 2 брикета по 100 грамм.
         int weightEgg=200/100*105;         // Яйца сырые – 4 яйца (1 яйцо — 70 грамм).
-        float weightBreakfast=weightBananas+weightMilk+weightIce+weightEgg;
+        float weightBreakfast=(float)(weightBananas+weightMilk+weightIce+weightEgg);
         float weightBreakfastKg =weightBreakfast/1000;
         System.out.println("Bес спортзавтрака "+weightBreakfast+"г. ("+weightBreakfastKg+"кг)");
         System.out.println();
@@ -91,7 +91,7 @@ public class Main {
 //  Посчитайте, сколько дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм, а сколько — если каждый день будет худеть на 500 грамм.
 //  Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
 //  Результаты всех подсчетов выведите в консоль.
-        float weightLose=7000;
+        float weightLose=7000f;
         float dayLoseMin=weightLose/250;
         System.out.println(dayLoseMin+" дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм");
         float dayLoseMax=weightLose/500;
@@ -101,13 +101,13 @@ public class Main {
         System.out.println();
 
         System.out.println("Задача 8");
-        float percentUp=10;
+        float percentUp=10f;
         float upSalary=(100+percentUp)/100;
-        float salaryMary=67_760;   //Маша получала 67 760 рублей в месяц.
+        float salaryMary=67_760f;   //Маша получала 67 760 рублей в месяц.
         System.out.println("Маша теперь получает "+salaryMary*upSalary+" рублей. Годовой доход вырос на "+(salaryMary*upSalary-salaryMary)*12+" рублей».");
-        float salaryDen=83_690;    // Денис получает 83 690 рублей в месяц.
+        float salaryDen=83_690f;    // Денис получает 83 690 рублей в месяц.
         System.out.println("Денис теперь получает "+salaryDen*upSalary+" рублей. Годовой доход вырос на "+(salaryDen*upSalary-salaryDen)*12+" рублей».");
-        float salaryKrist=76_230;  // Кристина получает 76 230 рублей в месяц.
+        float salaryKrist=76_230f;  // Кристина получает 76 230 рублей в месяц.
         System.out.println("Кристина теперь получает "+salaryKrist*upSalary+" рублей. Годовой доход вырос на "+(salaryKrist*upSalary-salaryKrist)*12+" рублей».");
     }
 }
