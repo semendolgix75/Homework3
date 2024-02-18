@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("Задача 1");
 //        Объявите переменные типа int, byte, short, long, float, double.
 //        Название переменных может быть любым, но если состоит из двух слов и более, должно соответствовать правилу camelCase.
@@ -39,37 +38,48 @@ public class Main {
         System.out.println();
 
         System.out.println("Задача 3");
+
 //          Три учительницы закупили все вместе 480 листов бумаги на все три класса.
 //          Посчитайте, сколько достанется листов каждому ученику.
 //          Результат задачи выведите в консоль в формате: «На каждого ученика рассчитано … листов бумаги».
         int pupilLP=23;    //  Людмилы Павловны — 23 ученика
         int pupilAS=27;    //  Анны Сергеевны — 27 учеников
         int pupilEA=30;    //  Екатерины Андреевны — 30 учеников
-        float allList=480;  //  закупили все вместе 480 листов бумаги
+        float allList=480f;  //  закупили все вместе 480 листов бумаги
         float list=allList/(pupilLP+pupilAS+pupilEA);
         System.out.println("На каждого ученика рассчитано "+list+" листов бумаги");
         System.out.println();
 
         System.out.println("Задача 4");
 //  Производительность машины для изготовления бутылок — 16 бутылок за 2 минуты.
-        float efficiency=16f;                    //Производительность машины для изготовления бутылок в 2 минуты
-        float efficiency1=efficiency/2*20;              //за 20 минут
-        float efficiency2=efficiency/2*60*24;           //за сутки
-        float efficiency3=efficiency/2*60*24*3;         //за 3 дня
-        float efficiency4=efficiency/2*60*24*30;        //за 1 месяц
-        System.out.println("За 20 минут машина произвела "+efficiency1+" штук бутылок ");
-        System.out.println("За сутки машина произвела "+efficiency2+",штук бутылок");
-        System.out.println("За 3 дня машина произвела "+efficiency3+",штук бутылок");
-        System.out.println("За 1 месяц машина произвела "+efficiency4+",штук бутылок");
+
+        float efficiencyPer2min=16f;
+        int minutesPerHour=60;
+        int hourPerDay=24;
+        int dayPerMouth=30;
+        float efficiency=efficiencyPer2min/2;                                           //Производительность машины для изготовления бутылок в минуту
+        float efficiencyPer20min=efficiency*20;                                         //за 20 минут
+        float efficiencyPerDay=efficiency*minutesPerHour*hourPerDay;                    //за сутки
+        float efficiencyPerTreeDay=efficiency*minutesPerHour*hourPerDay*3;              //за 3 дня
+        float efficiencyPerMouth=efficiency*minutesPerHour*hourPerDay*dayPerMouth;      //за 1 месяц
+        System.out.println("За 20 минут машина произвела "+efficiencyPer20min+" штук бутылок ");
+        System.out.println("За сутки машина произвела "+efficiencyPerDay+",штук бутылок");
+        System.out.println("За 3 дня машина произвела "+efficiencyPerTreeDay+",штук бутылок");
+        System.out.println("За 1 месяц машина произвела "+efficiencyPerMouth+",штук бутылок");
         System.out.println();
 
         System.out.println("Задача 5");
 //        На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой.
 //        На один класс уходит 2 банки белой и 4 банки коричневой краски. Сколько банок каждой краски было куплено?
-        float qtyPot=120f;
-        float qtyOffice=qtyPot/(2+4);    // Количество классов на требуемую краску
-        System.out.println("В школе, где "+qtyOffice+" классов, нужно "+qtyOffice*2+" банок белой краски " +
-                "и "+qtyOffice*4+" банок коричневой краски ");
+        int qtyPot=120;
+        int normWhitePaint=2;
+        int normBrownPaint=4;
+        int qtyOffice=qtyPot/(normBrownPaint+normWhitePaint);    // Количество классов на требуемую норму краски
+        int qtyWhitePaint=qtyOffice*normWhitePaint;
+        int qtyBrownPaint=qtyOffice*normBrownPaint;
+        System.out.println("В школе, где "+qtyOffice+" классов, " +
+         "нужно "+qtyWhitePaint+" банок белой краски " +
+                qtyBrownPaint+" банок коричневой краски ");
         System.out.println();
 
         System.out.println("Задача 6");
@@ -92,22 +102,32 @@ public class Main {
 //  Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
 //  Результаты всех подсчетов выведите в консоль.
         float weightLose=7000f;
-        float dayLoseMin=weightLose/250;
+        float loseMin=250f;
+        float loseMax=500f;
+        float dayLoseMin=weightLose/loseMin;
         System.out.println(dayLoseMin+" дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм");
-        float dayLoseMax=weightLose/500;
+        float dayLoseMax=weightLose/loseMax;
         System.out.println(dayLoseMax+" дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм");
-        float dayLoseAvg=(dayLoseMin+dayLoseMax)/2;
+        float dayLoseAvg=(dayLoseMin+dayLoseMax)/2f;
         System.out.println(dayLoseAvg+" дней потребоваться в среднем, чтобы добиться результата похудения");
         System.out.println();
 
         System.out.println("Задача 8");
         float percentUp=10f;
-        float upSalary=(100+percentUp)/100;
+        float upSalary=(100+percentUp)/100f;     //Увеличение зарплаты
+        int mouthPerYear=12;        //Месяцев в году
         float salaryMary=67_760f;   //Маша получала 67 760 рублей в месяц.
-        System.out.println("Маша теперь получает "+salaryMary*upSalary+" рублей. Годовой доход вырос на "+(salaryMary*upSalary-salaryMary)*12+" рублей».");
+        float salaryMaryUp=salaryMary*upSalary;
+        float salaryMaryUpYear=(salaryMary*upSalary-salaryMary)*mouthPerYear;
+        System.out.println("Маша теперь получает "+salaryMaryUp+" рублей. Годовой доход вырос на "+salaryMaryUpYear+" рублей».");
         float salaryDen=83_690f;    // Денис получает 83 690 рублей в месяц.
-        System.out.println("Денис теперь получает "+salaryDen*upSalary+" рублей. Годовой доход вырос на "+(salaryDen*upSalary-salaryDen)*12+" рублей».");
+        float salaryDenUp=salaryDen*upSalary;
+        float salaryDenUpYear=(salaryDen*upSalary-salaryDen)*mouthPerYear;
+        System.out.println("Денис теперь получает "+salaryDenUp+" рублей. Годовой доход вырос на "+salaryDenUpYear+" рублей».");
         float salaryKrist=76_230f;  // Кристина получает 76 230 рублей в месяц.
-        System.out.println("Кристина теперь получает "+salaryKrist*upSalary+" рублей. Годовой доход вырос на "+(salaryKrist*upSalary-salaryKrist)*12+" рублей».");
+        float salaryKristUp=salaryKrist*upSalary;
+        float salaryKristUpYear=(salaryKrist*upSalary-salaryKrist)*mouthPerYear;
+        System.out.println("Кристина теперь получает "+salaryKristUp+" рублей. Годовой доход вырос на "+salaryKristUpYear+" рублей».");
+
     }
 }
